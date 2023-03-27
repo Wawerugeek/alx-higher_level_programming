@@ -1,2 +1,2 @@
 # alx-higher_level_programming
-This repo contains alx higher level programming projects in python
+This repository  contains alx higher level programming projects in python
