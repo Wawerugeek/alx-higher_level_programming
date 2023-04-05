@@ -2,13 +2,13 @@
 """DEfine class Rectangle"""
 
 class Rectangle:
-    """class public attribute"""
-    number_of_instances = 0
+    
     """Class rectangle: it will define the properties:
         Attributes: 
         width: rep width of the rectangle
         height: rep height of the rect:
         """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Method that will be called everytime when class rectangle is instaciated
@@ -18,6 +18,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
