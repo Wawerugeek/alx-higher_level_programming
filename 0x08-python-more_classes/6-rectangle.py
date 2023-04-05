@@ -2,6 +2,8 @@
 """DEfine class Rectangle"""
 
 class Rectangle:
+    """class public attribute"""
+    number_of_instances = 0
     """Class rectangle: it will define the properties:
         Attributes: 
         width: rep width of the rectangle
@@ -91,3 +93,10 @@ class Rectangle:
         """this method return the string rep of the rectangle"""
         div = "Rectangle({:d}, {:d})".format(self.__width, self.__height)
         return (div)
+
+    def __del__(self):
+        """for deleting an instance"""
+        prin = "Bye rectangle..."
+        print(f"{prin}")
+        """DEcrement"""
+        type(self).number_of_instances -= 1
