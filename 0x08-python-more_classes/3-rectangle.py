@@ -82,5 +82,8 @@ class Rectangle:
                 rectlist.append("#")
             rectlist.append("\n")
 
+        """remove the last blank line"""
+        rectlist.pop()
+
         return ("".join(rectlist))
 
