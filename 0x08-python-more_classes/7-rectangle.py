@@ -83,7 +83,7 @@ class Rectangle:
 
         for i in range(self.__height):
             for j in range(self.__width):
-                rectlist.append("#")
+                rectlist.append(str(self.print_symbol)
             rectlist.append("\n")
 
         """remove the last blank line"""
