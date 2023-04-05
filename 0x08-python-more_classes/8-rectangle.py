@@ -115,7 +115,7 @@ class Rectangle:
         F_area = rect_1.area()
         S_area = rect_2.area()
 
-        if f_area >= s_area:
+        if F_area >= S_area:
             return rect_1
         else:
             return rect_2
