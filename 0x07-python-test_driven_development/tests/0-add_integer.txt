@@ -1,0 +1,74 @@
+Various tests cases for '0-add_integer.py'
+
+===================================
+
+function 'add_integer()' takes two arguments a,b with b having a defualt value
+of 98,
+
+=================================
+
+test cases to be evaluated 
+==========================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+if the second argument is negative.
+
+>>>add_integer(10,-5)
+5
+
+works with floats.
+
+>>> add_integer(10, 5.0)
+5
+
+if both arguments are negative.
+>>> add_integer(-1, -1)
+0
+
+combination of floats and non-floating point
+
+>>> add_integer(10.5, -5.5)
+5
+
+the second argument is not mandatory 
+
+>>> add_integer(10)
+108
+
+function add_integer only accepts ints or floats, so lets test that
+
+>>> add_integer("ALX-S")
+Traceback(most recent call last):
+TypeError: a must be an integer
+
+if no arguments are passed
+
+>>> add_integer()
+Traceback(most recent call last):
+TypeError: add_integer must have a required argument 
+
+>>>add_integer(10, 15, 38)
+Trceback(most recent call last):
+TypeError: add_integer only have two positional arguments
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer 
+
+>>> add_integer(15, None)
+Traceback (most recent call last):
+TypeError: b must be an integer 
+
+
+>>> add_integer([9, 9, 9])
+Traceback (most recent call lasr):
+TypeError: a must be an integer 
+
+what if Nan is passed as argument like this
+
+>>> add_integer(15, float('nan'))
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+
