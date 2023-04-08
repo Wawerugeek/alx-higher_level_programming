@@ -1,0 +1,43 @@
+============
+test cases for '5-text_indentation.py'
+
+prints a text with 2 lines after . , ? and : characters
+
+>>> text_indentation = __import__(5-text_indetation).text_indentation 
+
+if its given a number
+
+>>> text_identation(9)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+dictionary is passed
+
+>>>text_identation({"two": 2, "Goat",7)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+no arguments passed
+
+>>> text_identation()
+Traceback (most recent call last):
+TypeError: text must be a string
+
+None test
+
+>>> text_identation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+success 
+>>> text_identation("?:.,")
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+,
+
+
