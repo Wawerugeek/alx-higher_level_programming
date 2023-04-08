@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a file with unittests for max_integer([]) function"""
+"""Unittest for max_integer([...])"""
 
 import unittest
 max_integer = __import__('6-max_integer').max_integer
@@ -8,12 +8,12 @@ max_integer = __import__('6-max_integer').max_integer
 class TestMaxInteger(unittest.TestCase):
     def test_first_element(self):
         """Test the first one"""
-        first = [40, 30, 20, 10]
+        first_element = [40, 30, 20, 10]
         self.assertEqual(max_integer(first), 40)
 
     def test_last_max(self):
         """Test the last one"""
-        last = [10, 10, 90, 100]
+        last_max = [10, 10, 90, 100]
         self.assertEqual(max_integer(last), 100)
 
     def test_empty(self):
