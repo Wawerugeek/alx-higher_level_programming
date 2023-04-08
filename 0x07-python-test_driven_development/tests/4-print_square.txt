@@ -1,0 +1,49 @@
+
+========================
+explains the use if 4-print_square.py
+
+=======================
+
+this module entails a function that prints the square using # character
+
+the size parameter of the square represenst the side
+
+>>> print_square = __import_('4-print_square').print_square
+sucess
+
+>>> print_square(3)
+###
+###
+###
+
+no arguments passed
+
+>>> print_square()
+Traceback (most recent call last):
+TypeError: the function requires a positional argument 
+
+if zero is passed
+
+>>> print_square(0)
+
+if 1 is passed:
+>>> print_square(1)
+#
+
+negative number is passed
+>>> print_square(-4)
+Traceback (most recent call last):
+TypeError: size must be >= 0
+
+string is passed
+
+>>> print_square("string")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+
+None is passed
+
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
