@@ -8,7 +8,7 @@ def square_matrix_simple(matrix=[]):
         result_row = []
         for cols in row:
             mult = cols * cols
-            result_matrix.append(mult)
+            result_row.append(mult)
         result_matrix.append(result_row)
 
     return result_matrix
