@@ -3,7 +3,8 @@
 
 def uniq_add(my_list=[]):
     new_list = set(my_list)
+    count = 0
     for x in new_list:
-        new_list.append(x += 1)
+        count += x
 
-        return new_list
+    return count
