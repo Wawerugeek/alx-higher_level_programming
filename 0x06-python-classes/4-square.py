@@ -18,7 +18,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-    @propety
+    @property
     def size(self):
         """getter method for size"""
         return (self.__size)
@@ -29,7 +29,7 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        self.__size = size
 
     def area(self):
         """returns the current aree"""
