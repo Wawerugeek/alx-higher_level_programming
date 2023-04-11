@@ -1,6 +1,7 @@
 The following are tests associated with operations in mylist class
 
 import the class methods to scrunitize
+>>>MyList = __import__('1-my_list').MyList
 Tests with empty list 
     >>>my_list = mylist()
     >>>print(my_list)
