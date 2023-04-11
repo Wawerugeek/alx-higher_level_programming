@@ -1,0 +1,31 @@
+This module defines tests based on BaseGeometry class
+import the method to test
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+TEST CASES:
+Area() method:
+>>> bg = BaseGeometry()
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+with positive integer:
+    >>> bg.integer_validator("my_int", 12)
+
+with negative integer:
+    >>> bg.integer_validator("number", -7)
+    Traceback (most recent call last):
+    ValueError: number must be greater than 0
+
+with more positional arguments than needed:
+    >>> bg.integer_validator("numbers", 78, 91)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+with no arguments:
+>>> bg = BaseGeometry()
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments
+
+
