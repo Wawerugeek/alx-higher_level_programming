@@ -32,3 +32,28 @@ list with non-int values
     >>>my_list.print_sorted()
     Traceback (most recent call last):
     TypeError: strings are not iterable
+
+from 1-main.py
+>>> my_list = MyList([10, 7, 2])
+	>>> print(my_list)
+	[10, 7, 2]
+	>>> my_list.print_sorted()
+	[2, 7, 10]
+
+	>>> my_list = MyList()
+	>>> my_list.append(10)
+	>>> my_list.append(2)
+	>>> my_list.append(7)
+	>>> print(my_list)
+	[10, 2, 7]
+	>>> my_list.print_sorted()
+	[2, 7, 10]
+
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(5)
+	>>> my_list.append(-5)
+	>>> print(my_list)
+	[1, 5, -5]
+	>>> my_list.print_sorted()
+	[-5, 1, 5]
