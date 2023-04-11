@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """defines method area 
-    raises an Exception"""
+    """defines method area"""
     def area(self):
+        """raises an exception for now"""
         raise Exception('area() is not implemeted')
