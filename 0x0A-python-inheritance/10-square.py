@@ -22,6 +22,7 @@ class Rectangle(BaseGeometry):
         """returns string represenation of the rectangle"""
         return (f"[Rectangle] {self.__width}/{self.__height}")
 
+
 class Square(Rectangle):
     """building its constructor"""
     def __init__(self, size):
