@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """module that adds all arguments to a python list and the save"""
-import json
 import sys
 
 
