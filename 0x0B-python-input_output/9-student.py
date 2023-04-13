@@ -12,7 +12,7 @@ class Student:
         int """
         self.first_name = first_name
         self.last_name = last_name
-        self.age = self.age
+        self.age = age
 
     def to_json(self):
         """public method that gets dic represenation"""
