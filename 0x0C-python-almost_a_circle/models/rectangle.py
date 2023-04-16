@@ -19,6 +19,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.validate_int("width", value, False)
         self.__width = value
 
     @property
@@ -27,6 +28,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        self.validate_int("height", value, False)
         self.__height = value
 
     @property
@@ -35,6 +37,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        self.validate_int("x", value)
         self.__x = value
 
     @property
@@ -43,4 +46,14 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        self.validate_int("y", value)
         self.__y = value
+
+    def validate_int(self, name, value, test=True):
+        """method to validate if its interger: used method because of DRY"""
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if not test and value <= 0:
+            raise ValueError(f"{name} must be > 0")
+        elif test and value < 0:
+            raise ValueError(f"{name} must be >= 0")
