@@ -57,3 +57,7 @@ class Rectangle(Base):
             raise ValueError(f"{name} must be > 0")
         elif test and value < 0:
             raise ValueError(f"{name} must be >= 0")
+
+    def area(self):
+        """public method that returns an area of rectangle instance"""
+        return self.__width * self.__height
