@@ -61,3 +61,13 @@ class Rectangle(Base):
     def area(self):
         """public method that returns an area of rectangle instance"""
         return self.__width * self.__height
+
+    def display(self):
+        """method that prints to stdout the rectangle instance"""
+        var = "\n" * self.y + \
+              (" " * self.x + "#" * self.width + "\n") * self.height
+        print(var, end="")
+
+    def __str__(self):
+        """this method overrides the __str__ to return new string rep"""
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
