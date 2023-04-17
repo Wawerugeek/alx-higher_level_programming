@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from json import dumps, loads
 """this module contains the Base class"""
 
 
@@ -14,3 +15,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None or not list_dictionaries:
+            return "[]"
+        else:
+            return dumps(list_dictionaries)
