@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""this module defines class rectanglei which inherits from base"""
+"""this module defines class rectangle which inherits from base"""
 from models.base import Base
 
 
@@ -50,7 +50,7 @@ class Rectangle(Base):
         self.__y = value
 
     def validate_int(self, name, value, test=True):
-        """method to validate if its interger: used method because of DRY"""
+        """method to validate if its integer: used method because of DRY"""
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         if not test and value <= 0:
@@ -72,3 +72,23 @@ class Rectangle(Base):
         """this method overrides the __str__ to return new string rep"""
         return f"[Rectangle] ({self.id})"\
             f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """this method takes various number of non-keyword argument
+        following the below procedure
+        1st argument should be the id attribute
+        2nd argument should be the width attribute
+        3rd argument should be the height attribute
+        4th argument should be the x attribute
+        5th argument should be the y attribute
+        """
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.__width = args[1]
+        if len(args) >= 3:
+            self.__height = args[2]
+        if len(args) >= 4:
+            self.__x = args[3]
+        if len(args) >= 5:
+            self.__y = args[4]
