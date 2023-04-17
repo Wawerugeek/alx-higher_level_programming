@@ -92,7 +92,7 @@ class Rectangle(Base):
             self.__x = args[3]
         if len(args) >= 5:
             self.__y = args[4]
-        elif kwargs:
+        elif kwargs and not args:
             if "id" in kwargs:
                 self.id = kwargs["id"]
             if "width" in kwargs:
@@ -102,4 +102,4 @@ class Rectangle(Base):
             if "x" in kwargs:
                 self.__x = kwargs["x"]
             if "y" in kwargs:
-                self.__y = kwargs["x"]
+                self.__y = kwargs["y"]
