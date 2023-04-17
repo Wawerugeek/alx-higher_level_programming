@@ -70,7 +70,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """this method overrides the __str__ to return new string rep"""
-        return f"[Rectangle] ({self.id})"\
+        return f"[Rectangle] ({self.id}) "\
             f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
