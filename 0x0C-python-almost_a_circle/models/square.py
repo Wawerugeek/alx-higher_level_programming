@@ -24,31 +24,31 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-    def update(self, *args, **kwargs):
-        """the update module that follows the following
+    def fetch(self, id=None, size=None, x=None, y=None):
+        """the fetch internal method checks whether the values are none
+        and if not it will update the instances of attrs.
         1st argument should be the id attribute
         2nd argument should be the size attribute
         3rd argument should be the x attribute
         4th argument should be the y attribute
         kwargs must be skipped if args exists
         """
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.size = args[1]
-        if len(args) >= 3:
-            self.x = args[2]
-        if len(args) >= 4:
-            self.y = args[3]
-        elif kwargs and not args:
-            if "id" in kwargs:
-                self.id = kwargs["id"]
-            if "size" in kwargs:
-                self.size = kwargs["size"]
-            if "x" in kwargs:
-                self.size = kwargs["x"]
-            if "y" in kwargs:
-                self.size = kwargs["y"]
+        if id is not None:
+            self.id = id
+        if size is not None:
+            self.size = size
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """this method checks whether is */** and updates
+        instances"""
+        if kwargs:
+            self.fetch(**kwargs)
+        elif args:
+            self.fetch(*args)
 
     def to_dictionary(self):
         """the dictionary representation of class square"""
