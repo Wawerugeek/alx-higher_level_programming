@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from json import dumps, loads
+import json
 """this module contains the Base class"""
 
 
@@ -18,8 +18,18 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """static method that converts from dictionary to json"""
-        if list_dictionaries is None or list_dictionaries == []:
+        """static method returns JSON serialization of list dicts"""
+        if list_dictionaries is None or not list_dictionaries:
             return "[]"
-        else:
-            return dumps(list_dictionaries)
+        return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """class method that deserialize json string to file
+        args:
+        list_objs : json string rep
+        """
+        if list_objs is not None:
+            list_objs = [obj.to_dictionary() for obj in list_objs]
+        with open(f"{cls.__name__}.json", "w", encoding="utf-8") as jsonF:
+            jsonF.write(cls.to_json_string(list_objs))
