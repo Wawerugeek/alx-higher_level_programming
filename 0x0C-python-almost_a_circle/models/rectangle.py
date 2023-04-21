@@ -85,31 +85,31 @@ class Rectangle(Base):
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
-            self.__width = args[1]
+            self.width = args[1]
         if len(args) >= 3:
-            self.__height = args[2]
+            self.height = args[2]
         if len(args) >= 4:
-            self.__x = args[3]
+            self.x = args[3]
         if len(args) >= 5:
-            self.__y = args[4]
+            self.y = args[4]
         elif kwargs and not args:
             if "id" in kwargs:
                 self.id = kwargs["id"]
             if "width" in kwargs:
-                self.__width = kwargs["width"]
+                self.width = kwargs["width"]
             if "height" in kwargs:
-                self.__height = kwargs["height"]
+                self.height = kwargs["height"]
             if "x" in kwargs:
-                self.__x = kwargs["x"]
+                self.x = kwargs["x"]
             if "y" in kwargs:
-                self.__y = kwargs["y"]
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
         """this module returns the dictionary rep. of rectangle"""
         return {
             "id": self.id,
-            "width": self.__width,
-            "height": self.__height,
-            "x": self.__x,
-            "y": self.__y
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
         }

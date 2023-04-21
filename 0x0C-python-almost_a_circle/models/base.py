@@ -24,6 +24,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """static method returns JSON serialization of list dicts"""
         if list_dictionaries is None or not list_dictionaries:
+            """check whether the this is empty and return none:"""
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -34,9 +35,9 @@ class Base:
         list_objs : json string rep
         """
         if list_objs is not None:
-            list_objs = [obj.to_dictionary() for obj in list_objs]
+            list_obj = [obj.to_dictionary() for obj in list_objs]
         with open(f"{cls.__name__}.json", "w", encoding="utf-8") as jsonF:
-            jsonF.write(cls.to_json_string(list_objs))
+            jsonF.write(Base.to_json_string(list_obj))
 
     @staticmethod
     def from_json_string(json_string):
