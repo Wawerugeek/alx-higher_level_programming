@@ -37,9 +37,9 @@ class Base:
         list_objs : json string rep
         """
         if list_objs is not None:
-            list_obj = [obj.to_dictionary() for obj in list_objs]
+            list_objs = [obj.to_dictionary() for obj in list_objs]
         with open(f"{cls.__name__}.json", "w", encoding="utf-8") as jsonF:
-            jsonF.write(Base.to_json_string(list_obj))
+            jsonF.write(Base.to_json_string(list_objs))
 
     @staticmethod
     def from_json_string(json_string):
