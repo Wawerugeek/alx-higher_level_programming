@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module containes base class and its associated operation each defined in each method"""
 import csv
 import json
 import turtle
@@ -43,6 +44,7 @@ class Base:
     def from_json_string(json_string):
         """static method that returns list rep of json str rep"""
         if json_string is None or not json_string:
+            """check whether json_string is empty or none"""
             return []
         return json.loads(json_string)
 
