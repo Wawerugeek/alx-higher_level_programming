@@ -1,7 +1,4 @@
--- script that lists all cities found in a db
+-- script that list cities of california 
+-- list all rows
 
-SELECT cities.id, cities.name from cities
-where state_id = (
-	select id from states where name = 'california'
-)
-order by cities.id asc;
+SELECT id, name FROM cities where state_id = (select id from states where name = 'california') ORDER BY id asc;
