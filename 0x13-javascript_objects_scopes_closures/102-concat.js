@@ -4,7 +4,7 @@ const fs = require('fs');
 const concatFiles = (file1, file2, file3) => {
   const file1C = fs.readFileSync(file1, 'utf8');
   const file2C = fs.readFileSync(file1, 'utf8');
-  const concat = file1C + file2C;
+  const concat = file1C + '\n' + file2C;
   fs.writeFileSync(file3, concat);
 };
 const file1 = process.argv[2];
