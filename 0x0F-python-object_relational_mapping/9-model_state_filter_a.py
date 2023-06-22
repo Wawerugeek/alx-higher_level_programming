@@ -22,7 +22,8 @@ def main():
     session = Session()
 
     for a in session.query(State).order_by(State.id).filter(
-        State.name.like("%a%")):
+        State.name.like("%a%")
+    ):
         print(f"{a.id}: {a.name}")
     session.close()
 
