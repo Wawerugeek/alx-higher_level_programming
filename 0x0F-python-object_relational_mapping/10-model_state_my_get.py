@@ -22,7 +22,7 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name == (state_name,))
+    state = session.query(State).filter(State.name == state_name)
     try:
         print(state[0].id)
     except IndexError:
