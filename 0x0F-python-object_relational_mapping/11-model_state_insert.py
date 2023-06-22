@@ -23,8 +23,9 @@ def main():
 
     obj = State(name='Lousiana')
     session.add(obj)
+    inst = session.query(State).filter_by(name="Louisiana").first()
+    print(inst.id)
     session.commit()
-    print(obj.id)
     session.close()
 
 
