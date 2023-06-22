@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" prints state objects with letter a
+""" this file prints all states from db
     """
 import sys
 from sqlalchemy import create_engine
@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 def main():
-    """for printing state objects with letter a"""
+    """prints all states"""
 
     user = sys.argv[1]
     password = sys.argv[2]
