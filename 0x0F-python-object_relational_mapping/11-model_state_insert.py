@@ -21,7 +21,7 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    obj = State(name='Lousiana')
+    obj = State(name='Louisiana')
     session.add(obj)
     inst = session.query(State).filter_by(name="Louisiana").first()
     print(inst.id)
