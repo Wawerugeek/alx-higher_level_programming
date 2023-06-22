@@ -15,15 +15,14 @@ def main():
     db_name = sys.argv[2]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                           .format(user, password, db_name), pool_pre_ping=True
-                           )
+                           .format(user, password, db_name))
 
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
     for i in session.query(State).order_by(State.id):
-        print(f"{i.id} : {i.name}")
+        print(f"{i.id}: {i.name}")
 
 
 if __name__ == "__main__":
