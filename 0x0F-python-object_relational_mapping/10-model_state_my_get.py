@@ -22,11 +22,11 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).filter(State.name == (state_name, )):
-        if state:
-            print(f"{state.id}")
-        else:
-            print("Not Found")
+    state = session.query(State).filter(State.name == (state_name,))
+    if state:
+        print(f"{state.id}")
+    else:
+        print("Not Found")
 
     session.close()
 
