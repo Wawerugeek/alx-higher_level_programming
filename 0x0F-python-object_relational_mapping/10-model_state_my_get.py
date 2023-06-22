@@ -23,7 +23,7 @@ def main():
     session = Session()
 
     for state in session.query(State).filter(State.name == (state_name, )):
-        if (state):
+        if state:
             print(f"{state.id}")
         else:
             print("Not Found")
