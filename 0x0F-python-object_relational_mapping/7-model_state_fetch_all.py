@@ -24,7 +24,6 @@ def main():
 
     for i in session.query(State).order_by(State.id):
         print(f"{i.id} : {i.name}")
-        session.close()
 
 
 if __name__ == "__main__":
