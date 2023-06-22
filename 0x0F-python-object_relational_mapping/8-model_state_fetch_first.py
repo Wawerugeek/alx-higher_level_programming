@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 def main():
-    """for printing states"""
+    """for printing the first state"""
 
     user = sys.argv[1]
     password = sys.argv[2]
