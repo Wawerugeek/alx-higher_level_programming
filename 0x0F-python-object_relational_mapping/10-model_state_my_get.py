@@ -23,9 +23,9 @@ def main():
     session = Session()
 
     state = session.query(State).filter(State.name == state_name)
-    try:
-        print(state[0].id)
-    except IndexError:
+    if state:
+        print(state.id)
+    else:
         print("Not Found")
 
     session.close()
