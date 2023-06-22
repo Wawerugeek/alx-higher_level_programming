@@ -12,7 +12,7 @@ def main():
 
     user = sys.argv[1]
     password = sys.argv[2]
-    db_name = sys.argv[2]
+    db_name = sys.argv[3]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(user, password, db_name))
