@@ -15,7 +15,7 @@ def main():
     response = requests.post(url, data=data)
     try:
         j_form = response.json()
-        if j_form == {}:
+        if not j_form and len(j_form) == 0:
             print("No result")
         else:
             print(f"[{j_form.get('id')}], {j_form.get('name')}")
