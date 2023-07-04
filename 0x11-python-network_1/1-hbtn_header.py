@@ -14,7 +14,7 @@ def main():
 
     url = sys.argv[1]
     with request.urlopen(url) as response:
-        data = response.info()
+        data = response.info() #retrieve metadata
         print(data.get("X-Request-Id"))
 
 
