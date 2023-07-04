@@ -8,11 +8,9 @@ def main():
     url = f"https://api.github.com/repos/{sys.argv[2]}/{sys.argv[1]}/commits"
     response = requests.get(url)
     commits = response.json()
-    try:
-        for i in range(min(10, len(commits))):
-            print(f"{commits[i].get('sha')}, {commits[i].get('commit').get('author').get('name')}")
-    except IndexError:
-        pass
+    for i in commits[0:10]:
+        print(f"{i.get('sha')}", end=": ")
+        print(f"{i.get('commit').get('author').get('name')}")
 
 
 if __name__ == "__main__":
