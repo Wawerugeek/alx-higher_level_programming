@@ -9,9 +9,8 @@ def main():
     response = requests.get(url)
     commits = response.json()
     try:
-        for i in range(10):
-            print(f"{commits[i].get('sha')},\
-                  {commits[i].get('commit').get('author').get('name')}")
+        for i in range(min(10, len(commits))):
+            print(f"{commits[i].get('sha')}, {commits[i].get('commit').get('author').get('name')}")
     except IndexError:
         pass
 
